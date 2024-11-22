@@ -1,0 +1,116 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+  }
+  
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  
+  .calculator {
+    background-color: #333;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    width: 320px;
+  }
+  
+  .display {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  
+  .display input {
+    width: 100%;
+    height: 60px;
+    font-size: 36px;
+    padding: 10px;
+    background-color: #222;
+    color: #fff;
+    border: none;
+    text-align: right;
+    border-radius: 10px;
+    outline: none;
+  }
+  
+  .buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    width: 100%;
+  }
+  
+  input[type="button"] {
+    width: 100%;
+    height: 60px;
+    font-size: 24px;
+    color: white;
+    background-color: #444;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+  }
+  
+  input[type="button"].operator {
+    background-color: #ff8c00;
+    color: white;
+  }
+  
+  input[type="button"].equal {
+    background-color: #28a745;
+    grid-column: span 2; /* Make equal button span two columns */
+    color: white;
+  }
+  
+  input[type="button"]:hover {
+    background-color: #555;
+  }
+  
+  input[type="button"].operator:hover {
+    background-color: #ff9933;
+  }
+  
+  input[type="button"].equal:hover {
+    background-color: #34c759;
+  }
+  
+  input[type="button"]:active {
+    transform: scale(0.95);
+  }
+  
+  input[type="button"].operator:active {
+    transform: scale(0.95);
+  }
+  
+  input[type="button"].equal:active {
+    transform: scale(0.95);
+  }
+  
+  @media (max-width: 768px) {
+    .calculator {
+      width: 100%;
+      padding: 15px;
+    }
+  
+    input[type="button"] {
+      height: 50px;
+      font-size: 20px;
+    }
+  
+    .display input {
+      font-size: 28px;
+    }
+  }
+  
